@@ -5,12 +5,34 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
+  TextEditingController etInput = new TextEditingController();
+
+  double inputUser = 0;
+
+  double kealvin = 0;
+
+  double reamor = 0;
+
+  konversi() {
+    setState(() {
+      inputUser = double.parse(etInput.text);
+      reamor = 4 / 5 * inputUser;
+      kealvin = inputUser + 273;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -29,6 +51,7 @@ class MyApp extends StatelessWidget {
                   hintText: 'Masukkan Angka Dalam Celcius',
                   labelText: 'Masukkan Angka Dalam Celcius',
                 ),
+                controller: etInput,
                 keyboardType: TextInputType.number,
                 //inputFormatters: <TextInputFormatter>[
                 // FilteringTextInputFormatter.digitsOnly
@@ -45,7 +68,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Padding(padding: EdgeInsets.all(10)),
                       Text(
-                        "150",
+                        '$kealvin',
                         style: TextStyle(fontSize: 30),
                       ),
                     ],
@@ -58,7 +81,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Padding(padding: EdgeInsets.all(10)),
                       Text(
-                        "150",
+                        '$reamor',
                         style: TextStyle(fontSize: 30),
                       ),
                     ],
@@ -71,7 +94,7 @@ class MyApp extends StatelessWidget {
                 child: TextButton(
                   style:
                       TextButton.styleFrom(backgroundColor: Colors.lightBlue),
-                  onPressed: () {},
+                  onPressed: konversi,
                   child: Text(
                     "Konversi Suhu",
                     style: TextStyle(
