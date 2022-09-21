@@ -1,16 +1,5 @@
-# statefull_widget
+NAMA : SISWI DIAH PRIADHITA DEWI
+NIM : 2041720090
+KELAS : 3H
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![praktikum1_stateless widget](https://user-images.githubusercontent.com/78891794/191494885-9aa18266-5bf5-4140-b10a-9699f2394262.jpeg)
